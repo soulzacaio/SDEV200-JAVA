@@ -1,5 +1,5 @@
 /* 
-* Program name: nSidedPoly.cpp
+* Program name: nSidedPoly.java
 * Author: Caio Souza
 * Date last updated: 10/24/2023
 * Purpose: Create a polygon class and define its behavior, present a UML of the class

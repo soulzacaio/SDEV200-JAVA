@@ -1,5 +1,5 @@
 /* 
-* Program name: conversion.cpp
+* Program name: conversion.java
 * Author: Caio Souza
 * Date last updated: 10/23/2023
 * Purpose: Create a program to convert between feet and meters.

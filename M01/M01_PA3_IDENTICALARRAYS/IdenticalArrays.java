@@ -1,5 +1,5 @@
 /* 
-* Program name: identicalArrays.cpp
+* Program name: identicalArrays.java
 * Author: Caio Souza
 * Date last updated: 10/23/2023
 * Purpose: Create a program that takes two 2d arrays of data and compares if arrays are equal

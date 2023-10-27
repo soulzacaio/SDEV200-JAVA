@@ -1,5 +1,5 @@
 /* 
-* Program name: creditCard.cpp
+* Program name: creditCard.java
 * Author: Caio Souza
 * Date last updated: 10/23/2023
 * Purpose: Create a program to check the validity of credit card numbers
