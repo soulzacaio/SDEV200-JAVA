@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "conversion",
+            "request": "launch",
+            "mainClass": "conversion",
+            "projectName": "SDEV200-JAVA_61b50583"
+        },
+        {
+            "type": "java",
             "name": "nSidedPoly",
             "request": "launch",
             "mainClass": "nSidedPoly",

@@ -114,22 +114,6 @@ public class creditCard
             vec.add((int)input.charAt(i) - '0');
         }
 
-/*         //first check ( number must be 13-16 digits long)
-        if (vec.size() < 13 || vec.size() > 16)
-        
-            System.out.println(input + " is invalid");
-        
-        else if(prefixMatched(vec))
-        {
-            if (isValid(vec))
-                System.out.println(input + " is valid");
-            else
-                System.out.println(input + " is invalid");
-        }
-        else
-            System.out.println(input + " is invalid");
-             */
-
         //first check ( number must be 13-16 digits long) and prefix must match
         if (vec.size() < 13 || vec.size() > 16 || !prefixMatched(vec))
             System.out.println(input + " is invalid");

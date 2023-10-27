@@ -83,9 +83,9 @@ public class IdenticalArrays
             System.out.println("The two arrays are not identical");
 
             //debugging
-                for (int j=0;j<3;j++)
+/*                 for (int j=0;j<3;j++)
             for (int k=0;k<3;k++)
-                System.out.println(m1[j][k] + " --- " + m2[j][k]);
+                System.out.println(m1[j][k] + " --- " + m2[j][k]); */
     }
 
 }
