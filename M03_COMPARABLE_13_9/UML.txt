@@ -1,0 +1,54 @@
+@startuml
+ skinparam classAttributeIconSize 0
+class GeometricObject<abstract>
+{
+{field}
+-color : String
+-filled : boolean
+-dateCreated : java.util.Date
+{method}
+#GeometricObject()
+#GeometricObject(color : String, filled : boolean)
+
++getColor() : String
++setColor(color : String) : String
+
++isFilled() : boolean
++setFilled(filled : boolean) : void
+
++getDateCreated() : java.util.Date
+
++toString() : String
+
++getArea() : double <<abstract>>
++getPerimeter() : double <<abstract>>
+}
+
+GeometricObject <|-- Circle
+
+class Circle
+{
+{field}
+-radius : double
+{method}
++Circle()
++Circle(radius : double)
+
++getRadius() : double
++setRadius(radius : double) : void
+
++equals(otherCircle : Object) : boolean
++compareTo(otherCircle : Circle) : int
+
++getArea() : double
++getPerimeter() : double
+toString() : String
+}
+
+Compare <|-- Circle
+class Compare<INTERFACE>
+{
++compareTo(T o) : int
+}
+
+@enduml
