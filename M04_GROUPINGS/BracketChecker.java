@@ -1,3 +1,10 @@
+/* 
+* Program name: bracketChecker.java
+* Author: Caio Souza
+* Date last updated: 11/192023
+* Purpose: Create a program to check files for proper bracket set up ({[]})
+*/
+
 package M04_GROUPINGS;
 
 import java.util.*;
