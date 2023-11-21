@@ -1,0 +1,144 @@
+@startuml
+!theme blueprint
+skinparam classAttributeIconSize 0
+
+abstract Item <ABSTRACT>
+{
+{field}
+#price : float
+#toppings : Vector<String>
+
+{method}
++getPrice() : float
++setPrice() : void
++getToppings() : String
++addToppings(input : int) : void
++toString() : String
+}
+
+Item <|-- Sub
+class Sub
+{
+{field}
+-footlong : boolean
+-bread : breadType
+-meat : meatType
+{method}
++Sub(footlong : boolean, bread : int, meat : int)
+
++getPrice() : float
++isFootlong() : boolean
++getMeat() : String
++getBread() : String
++getToppings() : String
+
++setPrice() : void
++setMeat(input : int) : void
++setBread(input : int) : void
++addToppings(input : int) : void
+
++toString() : String
+}
+Sub *-- breadType
+enum breadType <<ENUM>>
+{
+{field}
+WHITE(0, 1F, "White ")
+CIAB(1, 1.5F, "Ciabatta")
+ITALIAN(2, 1F, "Italian");
+
+{method}
+breadType(index : int, price : int, name : String)
+}
+
+Sub *-- meatType
+enum meatType <<ENUM>>
+{
+{field}
+ BEEF(0, 4.5F, "Beef")
+CHICKEN(1, 3.5F, "Chicken")
+MBALL(2, 4.0F, "Meatball");
+
+{method}
+meatType(index : int, price : int, name : String)
+}
+
+Item <|-- Shake
+class Shake
+{
+{field}
+-size : sizeType
+-flavor : flavorType
+{method}
++Shake(size : int, flavor : int, topping : int)
+
++getPrice() : float
++getSize() : String
++getToppings() : String
++getFlavor() : String
+
++setPrice() : void
++setSize(input : int) : void
++addToppings(input : int) : void
++setFlavor(input : int) : void
+
++toString() : String
+}
+
+Shake *-- sizeType
+enum sizeType<<ENUM>>
+{
+{field}
+SMALL(0, 3, "Small")
+MEDIUM(1, 4, "Medium")
+LARGE(2, 5, "Large");
+
+{method}
+sizeType(value : int, price : int, name : String)
+}
+
+Shake *-- flavorType
+enum flavorType <<ENUM>>
+{
+{field}
+STRAW(0, 1.5F, "Strawberry") 
+CHOC(1, 2.5F, "Chocolate")
+VANL(2, 0.5F, "Vanilla");
+
+{method}
+flavorType(value : int, price : int, name : String)
+}
+
+Sub *-- Order
+Shake *-- Order
+class Order
+{
+{field}
+-shakes : Vector<Shake>
+-subs : Vector<Sub>
+-total : float
+-customer : Customer
+{method}
++addShake(newShake : Shake) : void
++addSub(newSub : Sub) : void
++calculateTotal() : float
++setCustomer(newCustomers : Customer) : void
+
+
++getCustomer() : Customer
+
++toString() : String
+}
+
+
+struct Customer <<STRUCT>>
+{
+{field}
+-name : String
+-address : String
+-phoneNum : String
+{method}
+Customer(name : String, address : String, phoneNum : String)
+}
+Order o-- Customer
+@enduml
