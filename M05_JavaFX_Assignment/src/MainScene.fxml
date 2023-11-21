@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="347.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="Canada" fitHeight="190.0" fitWidth="306.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ca.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="China" fitHeight="114.0" fitWidth="175.0" layoutX="392.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@china.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="UK" fitHeight="164.0" fitWidth="306.0" layoutX="14.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@uk.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="USA" fitHeight="157.0" fitWidth="297.0" layoutX="331.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@us.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
