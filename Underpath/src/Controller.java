@@ -79,6 +79,7 @@ public class Controller implements Initializable
             AlertBox.popUp("Thank You For Your Order!", "Expect your order within 30mins.\nOtherwise it's on us!");
     }
 
+    // initialize all fields with data while formatting it
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
     {
@@ -118,17 +119,15 @@ public class Controller implements Initializable
         subToppCB.getItems().addAll(Sub.toppingStr);
     }
 
+    // builds a shake with user input and adds it to the order to be displayed
     public void addShake()
     {
         if (ShakeSizeChoiceBox.getValue() != null && ShakeFlavorCB.getValue() != null
                 && ToppingShakeCB.getValue() != null)
         {
-            // System.out.println(ShakeSizeChoiceBox.getValue());
             int size = 0;
-            // for (Shake.sizeType s : Shake.sizeType.values())
             for (String s : ShakeSizeChoiceBox.getItems())
             {
-                // if (s.name == ShakeSizeChoiceBox.getValue())
                 if (s.equals(ShakeSizeChoiceBox.getValue()))
                     break;
 
@@ -168,6 +167,7 @@ public class Controller implements Initializable
 
     }
 
+    // adds a sub to the order, built with user input
     public void addSub()
     {
         if (subSizeCB.getValue() != null && subBreadCB.getValue() != null && subMeatCB.getValue() != null)
