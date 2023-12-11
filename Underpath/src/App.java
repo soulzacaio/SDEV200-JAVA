@@ -12,8 +12,6 @@ import javafx.stage.Stage;
 
 public class App extends Application
 {
-    Stage window;
-    Scene sceneOne, sceneTwo;
 
     @Override
     public void start(Stage primaryStage)

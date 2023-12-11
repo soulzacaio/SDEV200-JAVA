@@ -6,12 +6,14 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+//this class allows the creating of popup windows to inform user of anything.
+//Given a title and a msg it will prompt user
 public class AlertBox
 {
     public static void popUp(String title, String msg)
     {
         Stage window = new Stage();
-        window.initModality(Modality.APPLICATION_MODAL);// does let user click on main scene until popup is resolved
+        window.initModality(Modality.APPLICATION_MODAL);// let user click on main scene until popup is resolved
         window.setTitle(title);
         window.setMinWidth(300);
         window.setMinHeight(200);

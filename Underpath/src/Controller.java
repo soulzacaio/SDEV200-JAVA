@@ -41,12 +41,10 @@ public class Controller implements Initializable
     private ChoiceBox<String> ToppingShakeCB;
 
     @FXML
-    private Button AddShakeBTTN;// = new Button();
+    private Button AddShakeBTTN;
 
     @FXML
     private TextField shakePrice;
-
-    // for SUBS @FXML
 
     @FXML
     private Label subSizeLabel;
@@ -70,11 +68,15 @@ public class Controller implements Initializable
     @FXML
     private ChoiceBox<String> subToppCB;
 
+    // used these to try to implement a delete function but it proved to be
+    // harder than I thought, I couldn't do it
     static int numShakes = 0;
     static int numSubs = 0;
 
+    // event for complete order button, prompts user after order completion
     public void completeOrder()
     {
+        // as long as order isnt empty, prompts user properlly
         if (!myOrder.isEmpty())
             AlertBox.popUp("Thank You For Your Order!", "Expect your order within 30mins.\nOtherwise it's on us!");
     }
@@ -119,6 +121,7 @@ public class Controller implements Initializable
         subToppCB.getItems().addAll(Sub.toppingStr);
     }
 
+    // event handler for addShakeButton, prompts user confirming order
     // builds a shake with user input and adds it to the order to be displayed
     public void addShake()
     {
@@ -162,11 +165,14 @@ public class Controller implements Initializable
 
             orderView.setItems(orderViewList);
 
+            // this triggers when user doesnt enter all data for an item
+            // an alert box pops up with appropriate msg
         } else
             AlertBox.popUp("ERROR: Incomplete Shake", "You still have choices to make");
 
     }
 
+    // event handler for adding sub, works same way as addShake
     // adds a sub to the order, built with user input
     public void addSub()
     {

@@ -4,15 +4,15 @@ public class Order
 {
     private Vector<Shake> myShakes;
     private Vector<Sub> mySubs;
-    // private float subTotal;
-    public Customer customer;
 
+    // default constructor, initializes the vectors
     Order()
     {
         myShakes = new Vector<>();
         mySubs = new Vector<>();
     }
 
+    // getters, return the full vector of shakes or subs
     public Vector<Shake> getShakes()
     {
         return myShakes;
@@ -23,11 +23,13 @@ public class Order
         return mySubs;
     }
 
+    // checks size to return bool equivalent to its state
     public boolean isEmpty()
     {
         return myShakes.size() == 0 && mySubs.size() == 0;
     }
 
+    // adds items to respective vectors members
     public void addShake(Shake newShake)
     {
         myShakes.add(newShake);
@@ -38,6 +40,7 @@ public class Order
         mySubs.add(newSub);
     }
 
+    // calculate price of whole order
     public float getSubTotal()
     {
         float subTotal = 0;
@@ -47,26 +50,16 @@ public class Order
         for (Sub sub : mySubs)
             subTotal += sub.getPrice();
 
-        // subTotal *= 1.07F; // sales tax
-        // subTotal += 3.5F; // delivery fee
         return subTotal;
     }
 
+    // used to add tax + delivery fee
     public float getTotal()
     {
         return getSubTotal() * 1.07F + 3.5F;
     }
 
-    public void setCustomer(String name, String address, String phoneNum)
-    {
-        customer = new Customer(name, address, phoneNum);
-    }
-
-    public String getCustomer()
-    {
-        return customer.name + '\n' + customer.address + '\n' + customer.phoneNumber;
-    }
-
+    // prints a comprehensive list of ordered items
     @Override
     public String toString()
     {

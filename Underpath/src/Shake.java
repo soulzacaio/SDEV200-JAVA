@@ -3,7 +3,6 @@ import java.util.*;
 public class Shake extends Item
 {
     // FIELDS
-    // private int size;
     private sizeType size;
     private flavorType flavor;
 
@@ -26,7 +25,6 @@ public class Shake extends Item
     public String getSize()
     {
         return size.name;
-        // return sizeStr[size];
     }
 
     public String getToppings()
@@ -37,7 +35,6 @@ public class Shake extends Item
     public String getFlavor()
     {
         return flavor.name;
-        // return flavorStr[flavor];
     }
 
     // SETTERS
@@ -47,6 +44,7 @@ public class Shake extends Item
 
     }
 
+    // sets price for the super class
     public void setPrice()
     {
         super.price = size.price + flavor.price;
@@ -68,6 +66,7 @@ public class Shake extends Item
 
     }
 
+    // prints a shake in appropriate format
     @Override
     public String toString()
     {
@@ -77,6 +76,8 @@ public class Shake extends Item
 
     public static final String[] toppingStr = { "Nothing", "Sprinkles", "Peanuts", "Choco Chips" };
 
+    // all enums are used to aid with printing the name and retrieving the string
+    // for item choices
     public static enum sizeType
     {
         SMALL(0, 3, "Small"), MEDIUM(1, 4, "Medium"), LARGE(2, 5, "Large");
@@ -92,7 +93,7 @@ public class Shake extends Item
             this.name = name;
         }
 
-        String getValue(String s)
+        int getValue(String s)
         {
 
             return this.value;
@@ -114,15 +115,5 @@ public class Shake extends Item
             this.name = name;
         }
     }
-
-    /*
-     * public static Map<sizeType, String> sizeToStr = new HashMap<>(); public
-     * static Map<String, sizeType> strToSize = new HashMap<>(); static {
-     * sizeToStr.put(sizeType.SMALL, "Small"); sizeToStr.put(sizeType.MEDIUM,
-     * "Medium"); sizeToStr.put(sizeType.LARGE, "Large"); strToSize.put("Small",
-     * sizeType.SMALL); strToSize.put("Medium", sizeType.MEDIUM);
-     * strToSize.put("Large", sizeType.LARGE); }
-     * 
-     */
 
 };
